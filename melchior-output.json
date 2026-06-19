@@ -1,0 +1,171 @@
+{
+    "patient_id": "pac-001",
+    "evaluated_at": "2026-06-17T11:32:44+00:00",
+    "triggered_rules": [
+        {
+            "name": "emergencia_hipertensiva",
+            "priority": 1,
+            "actions": [
+                {
+                    "type": "alert",
+                    "severity": "critical",
+                    "message": "PA em nível de emergência hipertensiva. Encaminhar com urgência."
+                },
+                {
+                    "type": "recommendation",
+                    "message": "Iniciar protocolo de crise hipertensiva conforme diretriz local. Reavaliar em 15 minutos."
+                }
+            ]
+        },
+        {
+            "name": "hipertensao_estagio2",
+            "priority": 2,
+            "actions": [
+                {
+                    "type": "alert",
+                    "severity": "high",
+                    "message": "Hipertensão estágio 2 detectada. Necessita acompanhamento."
+                },
+                {
+                    "type": "recommendation",
+                    "message": "Iniciar/ajustar anti-hipertensivo. Reavaliar em 7 dias. Encaminhar à UBS se possível."
+                }
+            ]
+        },
+        {
+            "name": "diabetico_hipertenso_nao_controlado",
+            "priority": 2,
+            "actions": [
+                {
+                    "type": "alert",
+                    "severity": "high",
+                    "message": "Paciente diabético e hipertenso com PA descontrolada. Alto risco cardiovascular."
+                },
+                {
+                    "type": "recommendation",
+                    "message": "Reforçar adesão ao tratamento. Revisar metas pressóricas (\u003c130/80). Solicitar exames de função renal."
+                }
+            ]
+        },
+        {
+            "name": "suspeita_tuberculose",
+            "priority": 3,
+            "actions": [
+                {
+                    "type": "alert",
+                    "severity": "medium",
+                    "message": "Quadro sugestivo de tuberculose. Necessária investigação."
+                },
+                {
+                    "type": "recommendation",
+                    "message": "Solicitar baciloscopia de escarro e teste rápido molecular (TRM-TB). Notificar vigilância epidemiológica."
+                }
+            ]
+        },
+        {
+            "name": "multimorbidade",
+            "priority": 3,
+            "actions": [
+                {
+                    "type": "alert",
+                    "severity": "medium",
+                    "message": "Paciente com 3 ou mais comorbidades. Atenção à polifarmácia e interações medicamentosas."
+                },
+                {
+                    "type": "recommendation",
+                    "message": "Revisar lista completa de medicamentos. Considerar avaliação geriátrica ou clínica geral."
+                }
+            ]
+        },
+        {
+            "name": "hiperglicemia_moderada",
+            "priority": 3,
+            "actions": [
+                {
+                    "type": "alert",
+                    "severity": "medium",
+                    "message": "Glicemia elevada (200-300 mg/dL). Controle glicêmico insuficiente."
+                },
+                {
+                    "type": "recommendation",
+                    "message": "Revisar dieta e adesão à medicação. Repetir glicemia de jejum em 7 dias."
+                }
+            ]
+        }
+    ],
+    "alerts": [
+        {
+            "type": "alert",
+            "severity": "critical",
+            "message": "PA em nível de emergência hipertensiva. Encaminhar com urgência.",
+            "rule": "emergencia_hipertensiva"
+        },
+        {
+            "type": "alert",
+            "severity": "high",
+            "message": "Hipertensão estágio 2 detectada. Necessita acompanhamento.",
+            "rule": "hipertensao_estagio2"
+        },
+        {
+            "type": "alert",
+            "severity": "high",
+            "message": "Paciente diabético e hipertenso com PA descontrolada. Alto risco cardiovascular.",
+            "rule": "diabetico_hipertenso_nao_controlado"
+        },
+        {
+            "type": "alert",
+            "severity": "medium",
+            "message": "Quadro sugestivo de tuberculose. Necessária investigação.",
+            "rule": "suspeita_tuberculose"
+        },
+        {
+            "type": "alert",
+            "severity": "medium",
+            "message": "Paciente com 3 ou mais comorbidades. Atenção à polifarmácia e interações medicamentosas.",
+            "rule": "multimorbidade"
+        },
+        {
+            "type": "alert",
+            "severity": "medium",
+            "message": "Glicemia elevada (200-300 mg/dL). Controle glicêmico insuficiente.",
+            "rule": "hiperglicemia_moderada"
+        }
+    ],
+    "recommendations": [
+        {
+            "type": "recommendation",
+            "message": "Iniciar protocolo de crise hipertensiva conforme diretriz local. Reavaliar em 15 minutos.",
+            "rule": "emergencia_hipertensiva"
+        },
+        {
+            "type": "recommendation",
+            "message": "Iniciar/ajustar anti-hipertensivo. Reavaliar em 7 dias. Encaminhar à UBS se possível.",
+            "rule": "hipertensao_estagio2"
+        },
+        {
+            "type": "recommendation",
+            "message": "Reforçar adesão ao tratamento. Revisar metas pressóricas (\u003c130/80). Solicitar exames de função renal.",
+            "rule": "diabetico_hipertenso_nao_controlado"
+        },
+        {
+            "type": "recommendation",
+            "message": "Solicitar baciloscopia de escarro e teste rápido molecular (TRM-TB). Notificar vigilância epidemiológica.",
+            "rule": "suspeita_tuberculose"
+        },
+        {
+            "type": "recommendation",
+            "message": "Revisar lista completa de medicamentos. Considerar avaliação geriátrica ou clínica geral.",
+            "rule": "multimorbidade"
+        },
+        {
+            "type": "recommendation",
+            "message": "Revisar dieta e adesão à medicação. Repetir glicemia de jejum em 7 dias.",
+            "rule": "hiperglicemia_moderada"
+        }
+    ],
+    "summary": {
+        "total_rules_evaluated": 10,
+        "total_rules_triggered": 6,
+        "highest_severity": "critical"
+    }
+}

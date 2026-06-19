@@ -1,0 +1,9 @@
+/vendor/
+.env
+.env.local
+/error_log
+.vscode/
+.idea/
+.DS_Store
+*.log
+*.cache

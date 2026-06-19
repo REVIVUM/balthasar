@@ -1,0 +1,12 @@
+{
+    "name": "melchior/resposta",
+    "description": "Container de resposta — traduz saída do Melchior para a Interface",
+    "require": {
+        "php": ">=8.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    }
+}
