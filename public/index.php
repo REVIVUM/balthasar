@@ -45,7 +45,7 @@ if ($uri === '/api/evaluate' && $method === 'POST') {
 if ($uri === '/health' && $method === 'GET') {
     echo json_encode([
         'status' => 'ok',
-        'service' => 'resposta',
+        'service' => 'balthasar',
         'timestamp' => date('c'),
     ]);
     exit;
